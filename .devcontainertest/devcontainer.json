@@ -9,7 +9,7 @@
         "esbenp.prettier-vscode",
         "eamodio.gitlens"
     ]}},
-    "shutdownAction": "none",
+    "shutdownAction": "none"
    //当关闭vscode时docker container不会关掉 适用于下载或者跑长项目时
 //     "containerEnv": {
 //         "DISPLAY": "${localEnv:DISPLAY}"

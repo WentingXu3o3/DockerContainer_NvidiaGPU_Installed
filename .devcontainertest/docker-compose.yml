@@ -6,8 +6,8 @@ services:
     container_name: containertest
     volumes:
       - ~/DockerContainer/.devcontainertest:/workspace/.devcontainertest
-      - ~/DockerContainer/code:/workspace/code
-      - ~/DockerContainer/data:/workspace/data
+      # - ~/DockerContainer/code:/workspace/code
+      # - ~/DockerContainer/data:/workspace/data
       - ~/.ssh:/root/.ssh:ro
       - ~/.gitconfig:/root/.gitconfig:ro
     deploy:

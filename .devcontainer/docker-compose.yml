@@ -5,7 +5,7 @@ services:
     image: imagetest
     container_name: containertest
     volumes:
-      - ~/DockerContainer/.devcontainertest:/workspace/.devcontainertest
+      - ~/DockerContainer/.devcontainer:/workspace/.devcontainer
       # - ~/DockerContainer/code:/workspace/code
       # - ~/DockerContainer/data:/workspace/data
       - ~/.ssh:/root/.ssh:ro

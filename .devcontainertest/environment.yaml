@@ -1,4 +1,4 @@
-name: dsg_3d
+name: conenvtest
 channels:
   - defaults
 dependencies:
@@ -25,4 +25,4 @@ dependencies:
   - zlib=1.2.13=h5eee18b_0
   - pip:
       - torch==2.0.1
-prefix: /opt/conda/envs/dsg_3d
+prefix: /opt/conda/envs/conenvtest

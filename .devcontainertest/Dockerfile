@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
 # Create the environment:
 COPY environment.yaml ./
-RUN conda env create -n dsg_3d -f environment.yaml
+RUN conda env create -n conenvtest -f environment.yaml
  
 SHELL ["/bin/bash", "-c"]
  

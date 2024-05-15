@@ -8,7 +8,7 @@ RUN pip install --upgrade git+https://github.com/mit-han-lab/torchsparse.git@v1.
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
 # Create the environment:
-# COPY environment.yaml ./
+COPY environment.yaml ./
 RUN conda env create -n conenvtest -f environment.yaml
  
 SHELL ["/bin/bash", "-c"]

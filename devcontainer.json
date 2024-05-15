@@ -1,0 +1,22 @@
+{
+    "name": "dsg_3d",
+    "dockerComposeFile": "docker-compose.yml",
+    "runServices": ["devcontainer"],
+    "service": "devcontainer",
+    "workspaceFolder": "/dsg_3d",
+    "customizations": {"vscode":{"extensions": [
+        "ms-python.python",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens"
+    ]}},
+    "shutdownAction": "none",
+   //当关闭vscode时docker container不会关掉 适用于下载或者跑长项目时
+//     "containerEnv": {
+//         "DISPLAY": "${localEnv:DISPLAY}"
+//     },
+//     "runArgs": [
+//         "--privileged",  // 在容器中使用特权模式（仅在必要时使用）
+//         "--ipc=host",    // 允许容器与主机共享 IPC 名称空间
+//         "--env=DISPLAY"  // 传递本地环境中的 DISPLAY 变量到容器
+//   ]
+}

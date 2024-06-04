@@ -14,9 +14,9 @@ RUN conda env create -n conenvtest -f environment.yaml
  
 SHELL ["/bin/bash", "-c"]
  
-RUN echo "source activate conenvtest" > ~/.bashrc 
+# RUN echo "source activate conenvtest" > ~/.bashrc 
 #conda environment will be activated every time you enter the container
-ENV PATH /opt/conda/envs/conenvtest/bin:$PATH 
+# ENV PATH /opt/conda/envs/conenvtest/bin:$PATH 
 #Conda environment, ensuring that executables from that environment are found first when running commands within the container.
 #ENV PATH /opt/conda/envs
 

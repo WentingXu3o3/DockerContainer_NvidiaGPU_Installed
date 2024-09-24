@@ -3,7 +3,7 @@ version:  "3.7"
 services: 
   devcontainer:
     build: .
-    image: imagetest
+    image: imagetest #imagetest self-defined by Dockerfile but nvidia/cuda:12.2.0-runtime-ubuntu20.04 is a dowloaded image
     container_name: containertest
     volumes:
       - ~/PATH/TO/DockerContainer/.devcontainer:/workspace/.devcontainer

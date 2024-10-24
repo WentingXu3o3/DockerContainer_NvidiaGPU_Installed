@@ -14,14 +14,14 @@
   sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
   sudo systemctl restart docker
   ```
-3. Run a sample container above to see whether nvidia-smi is enabled?
+3. Run a sample container above to see whether nvidia-smi is enabled? ```nvidia-smi```
 4. if 3 not, and saying "Failed to initialize NVML: Unknown Error"
    ```
    sudo vim /etc/nvidia-container-runtime/config.toml
    ```
-    change no-cgroups=true to false
-   save with :wq
-  restart docker
+   change no-cgroups=true to false and save with :wq
+   
+5. restart docker and try 3
   ```
   sudo systemctl restart docker
   ```

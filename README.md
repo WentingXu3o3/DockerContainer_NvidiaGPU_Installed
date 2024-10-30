@@ -35,14 +35,17 @@
    ```
    then ```sudo systemctl restart docker```
    then verity the nvidia runtime ```docker info | grep "Runtimes"```
+   
 3. Run a sample container above to see whether nvidia-smi is enabled? ```nvidia-smi```
-4. if 3 not, and saying "Failed to initialize NVML: Unknown Error"
+   ``` docker run --rm --gpus all nvidia/cuda:12.6.2-cudnn-devel-ubuntu20.04 nvidia-smi ```
+   
+5. if 3 not, and saying "Failed to initialize NVML: Unknown Error"
    ```
    sudo vim /etc/nvidia-container-runtime/config.toml
    ```
    change no-cgroups=true to false and save with :wq
    
-5. restart docker and try 3
+6. restart docker and try 3
   ```
   sudo systemctl restart docker
   ```

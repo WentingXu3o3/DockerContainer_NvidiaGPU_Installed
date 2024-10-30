@@ -9,11 +9,31 @@
    ```
    nvidia-smi
    ```
-2. if properly, install nvidia-container-toolkit
+2. if properly,
+  Set up the NVIDIA package repository:
+   ```
+   distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+   curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+   curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+   ```
+  install nvidia-container-toolkit
   ```
   sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
   sudo systemctl restart docker
   ```
+   Configure Docker to use the NVIDIA runtime by default: 
+   sudo nano /etc/docker/daemon.json
+   ```
+   {
+       "runtimes": {
+           "nvidia": {
+               "path": "nvidia-container-runtime",
+               "runtimeArgs": []
+           }
+       }
+   }
+
+   ```
 3. Run a sample container above to see whether nvidia-smi is enabled? ```nvidia-smi```
 4. if 3 not, and saying "Failed to initialize NVML: Unknown Error"
    ```

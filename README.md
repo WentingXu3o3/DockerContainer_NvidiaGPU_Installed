@@ -32,8 +32,9 @@
            }
        }
    }
-
    ```
+   then ```sudo systemctl restart docker```
+   then verity the nvidia runtime ```docker info | grep "Runtimes"```
 3. Run a sample container above to see whether nvidia-smi is enabled? ```nvidia-smi```
 4. if 3 not, and saying "Failed to initialize NVML: Unknown Error"
    ```

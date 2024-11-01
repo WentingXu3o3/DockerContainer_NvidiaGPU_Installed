@@ -1,5 +1,6 @@
 # 1.
-FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-devel
+FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-devel #ubuntu18
+#FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime #ubuntu20.04
 RUN apt-get update && apt-get install -y \
     git
 CMD ["/bin/bash"] 

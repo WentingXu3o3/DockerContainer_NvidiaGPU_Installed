@@ -61,6 +61,11 @@
 
 5.Take a peek at the directory structure to make sure it looks like it did before the mv: ls /var/lib/docker/ (note the trailing slash to resolve the symlink)
 
-6.Start docker back up service docker start
+6.change the
+```
+sudo chmod 755 /work/docker
+sudo chown -R root:docker /work/docker
+```
+and Start docker back up service docker start
 
 7.restart your containers

@@ -52,8 +52,8 @@
 ### How to change docker images installation location
 1.Stop docker: service docker stop. Verify no docker process is running ps faux
 
-2.Double check docker really isn’t running. Take a look at the current docker directory: ls /var/lib/docker/
-2b) Make a backup - tar -zcC /var/lib docker > /mnt/pd0/var_lib_docker-backup-$(date +%s).tar.gz
+2.Double check docker really isn’t running. Take a look at the current docker directory: ```ls /var/lib/docker/```
+2b) Make a backup - ```tar -zcC /var/lib docker > /mnt/pd0/var_lib_docker-backup-$(date +%s).tar.gz```
 
 3.Move the /var/lib/docker directory to your new partition: mv /var/lib/docker /mnt/pd0/docker
 

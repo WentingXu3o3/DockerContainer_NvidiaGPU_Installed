@@ -69,3 +69,20 @@ sudo chown -R root:docker /work/docker
 and Start docker back up service docker start
 
 7.restart your containers
+## Method 2:
+1.change the daemon.json
+```
+cat /etc/docker/daemon.json
+sudo nano /etc/docker/daemon.json
+```
+```
+{
+    "data-root": "/newspace/docker",
+    "runtimes": {
+        "nvidia": {
+            "args": [],
+            "path": "nvidia-container-runtime"
+        }
+    }
+}
+```

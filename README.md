@@ -77,6 +77,7 @@ sudo nano /etc/docker/daemon.json
 ```
 ```
 {
+    "graph":"/work/docker",
     "data-root": "/newspace/docker",
     "runtimes": {
         "nvidia": {
